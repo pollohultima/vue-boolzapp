@@ -96,7 +96,10 @@ const app = new Vue({
     },
 
     methods: {
-
+        changeContact(i) {
+            this.counter = i
+            console.log(this.counter);
+        }
     },
 
 

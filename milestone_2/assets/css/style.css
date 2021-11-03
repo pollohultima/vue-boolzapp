@@ -88,6 +88,27 @@ body {
     height: calc(100% - 300px);
 }
 
+.sent {
+    background-color: lightgreen;
+    float: right;
+}
+
+.msg {
+    min-width: 180px;
+}
+
+.received {
+    float: left;
+}
+
+.date {
+    font-size: 10px;
+}
+
+.user_wrapper {
+    width: 100%;
+}
+
 /* Utility */
 
 .lightgray {
