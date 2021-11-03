@@ -62,3 +62,21 @@ body {
     width: 100%;
     background-image: url("./assets/img/mine.jpg")!important;
 }
+
+.user_img {
+    width: 70px;
+}
+
+.mute_icon>i {
+    color: #8EDAFC;
+}
+
+.mute_icon>p {
+    font-size: 14px;
+}
+
+/* Utility */
+
+.lightgray {
+    color: #B1B1B1;
+}
