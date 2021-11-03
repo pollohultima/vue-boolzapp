@@ -50,13 +50,12 @@
                         <div class="sound_notification d-flex
                             justify-content-center
                             align-items-center">
-
-
                             <div class="mute_icon rounded-circle py-1
                                 bg-white
                                 m-4">
                                 <i class="fas fa-bell-slash m-2 fs-3"></i>
                             </div>
+
                             <div>
                                 <h5 class="mb-1">Ricevi notifiche di nuovi
                                     messaggi</h5>
@@ -65,10 +64,6 @@
                                     mb-0">Attiva
                                     notifiche desktop</p>
                             </div>
-
-
-
-
                         </div>
 
                         <div class="search d-flex justify-content-center
@@ -135,7 +130,16 @@
 
                         </div>
 
-                        <div class="messages"></div>
+                        <div class="messages">
+                            <div class="message"
+                                v-for="message in
+                                contacts[counter].messages">
+                                <div :class="message.status">
+                                    <p>{{message.text}}</p>
+                                </div>
+                            </div>
+
+                        </div>
 
                         <div class="type_section d-flex justify-content-evenly
                             align-items-center">
