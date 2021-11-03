@@ -29,7 +29,7 @@ body {
 }
 
 .head_chat, .head_side {
-    height: 105px;
+    height: 105px!important;
     background: #eaeaea;
 }
 
@@ -60,19 +60,19 @@ body {
 .messages {
     height: calc(100% - 210px);
     width: 100%;
-    background-image: url("./assets/img/mine.jpg")!important;
+    background-image: url("../assets/img/mine.jpg")!important;
 }
 
 .user_img {
     width: 70px;
 }
 
-.mute_icon>i {
-    color: #8EDAFC;
+.contact_avatar {
+    width: 85px;
 }
 
-.mute_icon>p {
-    font-size: 14px;
+.mute_icon>i {
+    color: #8EDAFC;
 }
 
 .type_section {
