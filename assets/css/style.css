@@ -75,8 +75,25 @@ body {
     font-size: 14px;
 }
 
+.type_section {
+    background: #eaeaea;
+    height: 105px;
+}
+
+.input_msg {
+    width: 80%;
+}
+
+.contacts {
+    height: calc(100% - 300px);
+}
+
 /* Utility */
 
 .lightgray {
     color: #B1B1B1;
+}
+
+.gray {
+    color: #6B7376;
 }
