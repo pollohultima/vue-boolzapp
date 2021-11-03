@@ -21,13 +21,23 @@
         <div id="root">
 
             <div class="background">
-                <div class="container">
-                    <div class="sidebar">
-                        <div class="head_side">
+                <div class="head_background"></div>
 
+                <div class="container_chat d-flex mb-3">
+
+                    <div class="sidebar d-flex flex-column">
+                        <div class="head_side">
+                            <div class="user"></div>
+                            <div class="side_icons">
+                                <i class="fas fa-circle-notch"></i>
+                                <i class="fas fa-comment-alt"></i>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
                         </div>
                         <div class="sound_notification">
-
+                            <div class="mute_icon">
+                                <i class="fas fa-bell-slash"></i>
+                            </div>
                         </div>
                         <div class="search"></div>
                         <div class="contacts">
@@ -36,10 +46,23 @@
 
                     </div>
 
-                    <div class="chat">
-                        <div class="head_chat"></div>
+                    <div class="chat d-flex flex-column">
+                        <div class="head_chat d-flex">
+                            <div class="contact">
+
+                            </div>
+                            <div class="chat_icon">
+                                <i class="fas fa-search"></i>
+                                <i class="fas fa-paperclip"></i>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
                         <div class="messages"></div>
-                        <div class="type"></div>
+                        <div class="type">
+                            <div class="emoji"><i class="far fa-smile"></i></div>
+                            <div class="input_msg"></div>
+                            <div class="audio"><i class="fas fa-microphone"></i></div>
+                        </div>
                     </div>
                 </div>
             </div>
