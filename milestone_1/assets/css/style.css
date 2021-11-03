@@ -60,7 +60,7 @@ body {
 .messages {
     height: calc(100% - 210px);
     width: 100%;
-    background-image: url("../assets/img/mine.jpg")!important;
+    background-image: url("/assets/img/mine.jpg")!important;
 }
 
 .user_img {
