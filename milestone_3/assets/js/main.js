@@ -10,13 +10,6 @@ const app = new Vue({
 
         input_text: "",
 
-        typedMsg:
-        {
-            date: '10/01/2020 15:30:55',
-            text: "",
-            status: 'sent'
-        },
-
 
         contacts: [
             {
@@ -112,12 +105,11 @@ const app = new Vue({
         },
 
         sendMsg() {
+            this.contacts[this.counter].messages.push({
+                date: '', text: this.input_text, status: 'sent'
+            }),
 
-            //this.typedMsg.push(this.input_text)
-
-            this.contacts[this.counter].messages.push(this.typed_msg)
-
-
+                this.input_text = ""
         }
     },
 
