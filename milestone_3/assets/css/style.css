@@ -1,0 +1,127 @@
+.mao {
+    background: #6B7376;
+    background: #8EDAFC;
+    background: #B1B1B1;
+    background: #F3EEEA;
+}
+
+body {
+    background-color: #D5DBD5!important;
+}
+
+.head_background {
+    height: 125px;
+    width: 100%;
+    background: #009688;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+
+.container_chat {
+    width: 85%!important;
+    height: 800px!important;
+    margin: auto;
+    position: relative;
+    top: 20px;
+    z-index: 1;
+}
+
+.head_chat, .head_side {
+    height: 105px!important;
+    background: #eaeaea;
+}
+
+.sidebar {
+    width: 40%;
+}
+
+.chat {
+    width: 60%;
+}
+
+.sound_notification {
+    height: 120px;
+    background-color: #8EDAFC;
+    ;
+}
+
+.search {
+    height: 75px;
+    background: #eaeaea;
+}
+
+.type {
+    height: 105px;
+    background: #eaeaea;
+}
+
+.messages {
+    height: calc(100% - 210px);
+    width: 100%;
+    background-image: url("../../assets/img/mine.jpg")!important;
+    overflow-y: scroll;
+}
+
+.user_img {
+    width: 70px;
+}
+
+.contact_avatar {
+    width: 85px;
+}
+
+.mute_icon>i {
+    color: #8EDAFC;
+}
+
+.type_section {
+    background: #eaeaea;
+    height: 105px;
+}
+
+.input_msg {
+    width: 80%;
+}
+
+.contacts {
+    height: calc(100% - 300px);
+    overflow-y: scroll;
+}
+
+.sent {
+    background-color: #d5f9ba;
+    float: right;
+}
+
+.msg {
+    min-width: 200px;
+}
+
+.received {
+    float: left;
+    background-color: white;
+}
+
+.date {
+    font-size: 10px;
+}
+
+.user_wrapper {
+    width: 100%;
+}
+
+.round {
+    border-radius: .7rem;
+}
+
+/* Utility */
+
+.lightgray {
+    color: #B1B1B1;
+}
+
+.gray {
+    color: #6B7376;
+}
