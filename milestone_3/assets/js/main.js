@@ -10,6 +10,8 @@ const app = new Vue({
 
         input_text: "",
 
+        last_log: dayjs().format('H:mm:ss'),
+
 
         contacts: [
             {
@@ -104,13 +106,23 @@ const app = new Vue({
             console.log(this.counter);
         },
 
+        reply() {
+            this.contacts[this.counter].messages.push({
+                date: dayjs().format('DD/MM/YYYY H:mm:ss'), text: 'ok', status: 'received'
+            })
+        },
+
         sendMsg() {
             this.contacts[this.counter].messages.push({
-                date: '', text: this.input_text, status: 'sent'
+                date: dayjs().format('DD/MM/YYYY H:mm:ss'), text: this.input_text, status: 'sent'
             }),
 
-                this.input_text = ""
-        }
+                this.input_text = "",
+
+                setTimeout(this.reply, 1000)
+
+        },
+
     },
 
 
