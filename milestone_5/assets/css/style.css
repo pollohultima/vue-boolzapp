@@ -34,11 +34,11 @@ body {
 }
 
 .sidebar {
-    width: 40%;
+    width: 33%;
 }
 
 .chat {
-    width: 60%;
+    width: 67%;
 }
 
 .sound_notification {
@@ -118,8 +118,8 @@ body {
     border-radius: .7rem;
 }
 
-.justify-self-end {
-    justify-self: flex-end;
+.user_wrapper>.date {
+    padding-top: 10px;
 }
 
 /* Utility */
@@ -130,4 +130,8 @@ body {
 
 .gray {
     color: #6B7376;
+}
+
+.info {
+    max-width: 240px;
 }
