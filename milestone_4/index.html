@@ -81,12 +81,11 @@
                             </div>
                         </div>
 
-                        <div class="contacts bg-white d-flex flex-column
-                            justify-content-evenly">
+                        <div class="contacts bg-white d-flex flex-column">
                             <div class="item d-flex" v-for="(contact, index) in
                                 contacts">
 
-                                <div class="user_wrapper d-flex"
+                                <div class="user_wrapper d-flex py-3"
                                     @click="changeContact(index)">
 
                                     <div class="contact_avatar mx-3">
@@ -121,7 +120,6 @@
                                 </div>
 
                                 <div class="info m-4">
-
                                     <h5 class="">{{contact.name}}</h5>
                                     <p class="text-muted m-0">Ultimo accesso
                                         oggi
