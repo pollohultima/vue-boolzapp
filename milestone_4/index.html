@@ -74,17 +74,18 @@
                                     id="basic-addon1"><i class="fas fa-search
                                         m-2 lightgray"></i></span>
                                 <input type="text" class="form-control
-                                    border-start-0"
+                                    border-start-0 search_contact"
                                     placeholder="Cerca o inizia una nuova chat"
                                     aria-label="search"
-                                    aria-describedby="basic-addon1">
+                                    aria-describedby="basic-addon1"
+                                    v-model="input_contact">
                             </div>
                         </div>
 
                         <div class="contacts bg-white d-flex flex-column">
                             <div class="item d-flex" v-for="(contact, index) in
-                                contacts">
-
+                                contacts"
+                                v-if="contact.name.toLowerCase().includes(input_contact)">
                                 <div class="user_wrapper d-flex py-3"
                                     @click="changeContact(index)">
 
@@ -96,7 +97,7 @@
                                     </div>
 
                                     <h4>{{contact.name}}</h4>
-
+                                    <span></span>
                                 </div>
                             </div>
                         </div>

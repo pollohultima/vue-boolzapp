@@ -10,6 +10,8 @@ const app = new Vue({
 
         input_text: "",
 
+        input_contact: "",
+
         last_log: dayjs().format('H:mm:ss'),
 
 
@@ -123,8 +125,10 @@ const app = new Vue({
 
                     setTimeout(this.reply, 1000)
             }
-
         },
+
+
+
 
     },
 
