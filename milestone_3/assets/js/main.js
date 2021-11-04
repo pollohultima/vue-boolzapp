@@ -8,6 +8,14 @@ const app = new Vue({
 
         i: 0,
 
+        typed_msg:
+        {
+            date: '10/01/2020 15:30:55',
+            text: "",
+            status: 'sent'
+        },
+
+
         contacts: [
             {
                 name: 'Michele',
@@ -99,7 +107,14 @@ const app = new Vue({
         changeContact(i) {
             this.counter = i
             console.log(this.counter);
+        },
+
+        sendMsg() {
+            this.contacts.messages.push(this.typed_msg)
         }
+
+
+
     },
 
 

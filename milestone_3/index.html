@@ -37,7 +37,7 @@
                                         src="./assets/img/avatar_8.jpg" alt="">
                                 </div>
 
-                                <h5 class="m-3">Matteo</h5>
+                                <h5 class="m-3">Matteo Polonio</h5>
 
                             </div>
                             <div class="side_icons m-2 fs-3 lightgray">
@@ -166,7 +166,8 @@
                             <div class="input_msg">
                                 <input type="text" class="form-control"
                                     placeholder="Scrivi un messaggio"
-                                    aria-label="type">
+                                    aria-label="type" v-model="typed_msg.text"
+                                    @keyup.enter="sendMsg">
                             </div>
 
                             <div class="audio"><i class="fs-3 fas fa-microphone
