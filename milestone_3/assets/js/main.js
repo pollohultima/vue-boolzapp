@@ -113,13 +113,16 @@ const app = new Vue({
         },
 
         sendMsg() {
-            this.contacts[this.counter].messages.push({
-                date: dayjs().format('DD/MM/YYYY H:mm:ss'), text: this.input_text, status: 'sent'
-            }),
+            if (this.input_text != "") {
 
-                this.input_text = "",
+                this.contacts[this.counter].messages.push({
+                    date: dayjs().format('DD/MM/YYYY H:mm:ss'), text: this.input_text, status: 'sent'
+                }),
 
-                setTimeout(this.reply, 1000)
+                    this.input_text = "",
+
+                    setTimeout(this.reply, 1000)
+            }
 
         },
 
