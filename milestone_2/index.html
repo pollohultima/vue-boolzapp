@@ -85,21 +85,21 @@
                             justify-content-evenly">
                             <div class="item d-flex" v-for="(contact, index) in
                                 contacts">
+
                                 <div class="user_wrapper d-flex"
                                     @click="changeContact(index)">
+
                                     <div class="contact_avatar mx-3">
                                         <img :src="'./assets/img/avatar' +
                                             contact.avatar + '.jpg'"
                                             class="img-fluid
                                             rounded-circle">
                                     </div>
+
                                     <h4>{{contact.name}}</h4>
+
                                 </div>
-
-
                             </div>
-
-
                         </div>
 
                     </div>
@@ -109,20 +109,27 @@
                         <div class="head_chat px-2 d-flex
                             justify-content-between align-items-center">
 
-                            <div class="contact d-flex align-items-center">
+                            <div class="contact d-flex align-items-center"
+                                v-for="(contact, index) in
+                                contacts" v-if="counter == index">
+
                                 <div class="user_img">
-                                    <img class="img-fluid rounded-circle
-                                        m-2"
-                                        src="./assets/img/avatar_1.jpg"
-                                        alt="">
+                                    <img :src="'./assets/img/avatar' +
+                                        contact.avatar + '.jpg'"
+                                        class="img-fluid
+                                        rounded-circle">
                                 </div>
 
                                 <div class="info m-4">
-                                    <h5 class="">Michele</h5>
+
+                                    <h5 class="">{{contact.name}}</h5>
                                     <p class="text-muted m-0">Ultimo accesso
                                         oggi
                                         alle</p>
                                 </div>
+                            </div>
+
+                            <div v-else class="contact d-none">
 
                             </div>
 
@@ -134,11 +141,12 @@
 
                         </div>
 
-                        <div class="messages">
+                        <div class="messages p-5">
                             <div class="message d-block" v-for="message in
                                 contacts[counter].messages">
-                                <div class="p-5 m-2 clearfix">
-                                    <div class="d-flex flex-column msg"
+                                <div class="py-1 px-4 m-1 clearfix">
+                                    <div class="d-flex flex-column msg p-3
+                                        round"
                                         :class="message.status">
                                         <span>{{message.text}}</span>
                                         <span class="text-end text-muted date">{{message.date}}</span>

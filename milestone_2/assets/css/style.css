@@ -89,16 +89,17 @@ body {
 }
 
 .sent {
-    background-color: lightgreen;
+    background-color: #d5f9ba;
     float: right;
 }
 
 .msg {
-    min-width: 180px;
+    min-width: 200px;
 }
 
 .received {
     float: left;
+    background-color: white;
 }
 
 .date {
@@ -107,6 +108,10 @@ body {
 
 .user_wrapper {
     width: 100%;
+}
+
+.round {
+    border-radius: .7rem;
 }
 
 /* Utility */
