@@ -118,6 +118,10 @@ body {
     border-radius: .7rem;
 }
 
+.justify-self-end {
+    justify-self: flex-end;
+}
+
 /* Utility */
 
 .lightgray {
