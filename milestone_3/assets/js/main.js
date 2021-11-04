@@ -8,7 +8,9 @@ const app = new Vue({
 
         i: 0,
 
-        typed_msg:
+        input_text: "",
+
+        typedMsg:
         {
             date: '10/01/2020 15:30:55',
             text: "",
@@ -110,11 +112,13 @@ const app = new Vue({
         },
 
         sendMsg() {
-            this.contacts.messages.push(this.typed_msg)
+
+            //this.typedMsg.push(this.input_text)
+
+            this.contacts[this.counter].messages.push(this.typed_msg)
+
+
         }
-
-
-
     },
 
 
