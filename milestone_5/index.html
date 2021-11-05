@@ -88,7 +88,8 @@
                                 v-if="contact.name.toLowerCase().includes(input_contact)">
                                 <div class="user_wrapper d-flex
                                     justify-content-between py-3"
-                                    @click="changeContact(index)">
+                                    @click="changeContact(index)" :class="index
+                                    === counter ? 'active' : ''">
 
                                     <div class="d-flex align-items-center">
 
@@ -105,7 +106,6 @@
                                                 - 1].text}}</div>
                                         </div>
                                     </div>
-
 
                                     <div class="date fs-6 text-muted me-2">{{contact.messages[contact.messages.length
                                         - 1].date}}</div>
@@ -157,16 +157,23 @@
                                 <div class="py-1 px-4 m-1 clearfix">
 
                                     <div class="d-flex flex-column msg p-3
-                                        round position-relative"
+                                        round position-relative single_msg"
                                         :class="message.status">
+
                                         <span>{{message.text}}</span>
                                         <span class="text-end text-muted date">{{message.date}}</span>
-                                        <div class="popup d-flex flex-column
+                                        <div class="icon_pop
                                             position-absolute">
-                                            <div class="info_msg">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                        <div class="popup
+                                            position-absolute p-2 shadow
+                                            rounded" :class="index
+                                            === counter ? 'd_block' : ''">
+                                            <div class="info_msg text-end">
                                                 <p>Info messaggio</p>
                                             </div>
-                                            <div class="delete">
+                                            <div class="delete text-end">
                                                 <p>Elimina messaggio</p>
                                             </div>
                                         </div>

@@ -124,7 +124,27 @@ body {
 
 .popup {
     right: 0px;
-    top: 30px;
+    top: 40px;
+    background-color: white;
+    z-index: 1;
+    display: none;
+    cursor: pointer;
+}
+
+.info .d_block {
+    display: block;
+}
+
+.icon_pop {
+    top: 2px;
+    right: 15px;
+    background-color: transparent;
+    opacity: .5;
+    display: none;
+}
+
+.active {
+    background-color: lightgray;
 }
 
 /* Utility */
