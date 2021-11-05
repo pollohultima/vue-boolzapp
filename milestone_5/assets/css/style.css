@@ -131,13 +131,15 @@ body {
     cursor: pointer;
 }
 
-.info .d_block {
+.single_msg:hover .icon_pop {
+    display: inline-block;
+}
+
+.d_block {
     display: block;
 }
 
 .icon_pop {
-    top: 2px;
-    right: 15px;
     background-color: transparent;
     opacity: .5;
     display: none;

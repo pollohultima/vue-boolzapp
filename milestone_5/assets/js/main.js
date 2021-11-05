@@ -15,6 +15,7 @@ const app = new Vue({
         last_log: dayjs().format('H:mm:ss'),
 
 
+
         contacts: [
             {
                 name: 'Michele',
@@ -126,6 +127,18 @@ const app = new Vue({
                     setTimeout(this.reply, 1000)
             }
         },
+
+        show_popup(n) {
+
+            this.i = n;
+            console.log(this.i);
+
+
+
+
+        },
+
+
 
 
 

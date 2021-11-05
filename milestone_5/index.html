@@ -152,24 +152,27 @@
                         </div>
 
                         <div class="messages p-5">
-                            <div class="message d-block" v-for="message in
+                            <div class="message d-block" v-for="(message, index)
+                                in
                                 contacts[counter].messages">
                                 <div class="py-1 px-4 m-1 clearfix">
 
                                     <div class="d-flex flex-column msg p-3
                                         round position-relative single_msg"
-                                        :class="message.status">
+                                        :class="message.status"
+                                        @click="show_popup(index)">
 
-                                        <span>{{message.text}}</span>
-                                        <span class="text-end text-muted date">{{message.date}}</span>
-                                        <div class="icon_pop
-                                            position-absolute">
-                                            <i class="fas fa-chevron-down"></i>
+                                        <div class="d-flex
+                                            justify-content-between">
+                                            {{message.text}}
+                                            <i class="fas fa-chevron-down
+                                                icon_pop ps-2"></i>
                                         </div>
+                                        <span class="text-end text-muted date">{{message.date}}</span>
                                         <div class="popup
                                             position-absolute p-2 shadow
                                             rounded" :class="index
-                                            === counter ? 'd_block' : ''">
+                                            === i ? 'd_block' : ''">
                                             <div class="info_msg text-end">
                                                 <p>Info messaggio</p>
                                             </div>
