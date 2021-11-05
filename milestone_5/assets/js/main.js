@@ -14,6 +14,8 @@ const app = new Vue({
 
         last_log: dayjs().format('H:mm:ss'),
 
+        dropdown: false,
+
 
 
         contacts: [
@@ -128,18 +130,28 @@ const app = new Vue({
             }
         },
 
-        show_popup(n) {
 
-            this.i = n;
-            console.log(this.i);
+        del(num) {
+            this.contacts[this.counter].messages.splice(num, 1)
+        },
 
-
-
-
+        show_popup() {
+            if (this.dropdown == true) {
+                this.drop = ''
+                this.dropdown = false
+                console.log(this.dropdown);
+            } else {
+                this.drop
+                this.dropdown = true
+                console.log(this.dropdown);
+            }
         },
 
 
-
+        drop(n) {
+            this.i = n;
+            console.log(this.i);
+        },
 
 
 

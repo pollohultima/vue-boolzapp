@@ -19,19 +19,21 @@
     <body>
 
         <div id="root">
-
             <div class="background">
                 <div class="head_background"></div>
-
                 <div class="container_chat d-flex mb-3">
 
+                    <!-- Aside with contacts and searchbar -->
                     <div class="sidebar d-flex flex-column">
 
+                        <!-- Sidebar header -->
                         <div class="head_side d-flex justify-content-between
                             align-items-center p-3">
 
+                            <!-- User info -->
                             <div class="user d-flex align-items-center">
 
+                                <!-- User image and name -->
                                 <div class="user_img">
                                     <img class="img-fluid rounded-circle m-2"
                                         src="./assets/img/avatar_8.jpg" alt="">
@@ -40,6 +42,8 @@
                                 <h5 class="m-3">Matteo Polonio</h5>
 
                             </div>
+
+                            <!-- User icons -->
                             <div class="side_icons m-2 fs-3 lightgray">
                                 <i class="fas fa-circle-notch m-2"></i>
                                 <i class="fas fa-comment-alt m-2"></i>
@@ -47,9 +51,11 @@
                             </div>
                         </div>
 
+                        <!-- Notification "banner" -->
                         <div class="sound_notification d-flex
                             justify-content-center
                             align-items-center">
+
                             <div class="mute_icon rounded-circle py-1
                                 bg-white
                                 m-4">
@@ -66,13 +72,17 @@
                             </div>
                         </div>
 
+                        <!-- Searchbar section -->
                         <div class="search d-flex justify-content-center
                             align-items-center">
                             <div class="input-group m-3 bg-white">
+
                                 <span class="input-group-text bg-transparent
                                     border-end-0"
                                     id="basic-addon1"><i class="fas fa-search
                                         m-2 lightgray"></i></span>
+
+                                <!-- Text input for search through contacts -->
                                 <input type="text" class="form-control
                                     border-start-0 search_contact"
                                     placeholder="Cerca o inizia una nuova chat"
@@ -82,6 +92,7 @@
                             </div>
                         </div>
 
+                        <!-- Contacts section -->
                         <div class="contacts bg-white d-flex flex-column">
                             <div class="item d-flex" v-for="(contact, index) in
                                 contacts"
@@ -91,6 +102,7 @@
                                     @click="changeContact(index)" :class="index
                                     === counter ? 'active' : ''">
 
+                                    <!-- Item of contact container -->
                                     <div class="d-flex align-items-center">
 
                                         <div class="contact_avatar mx-3">
@@ -99,6 +111,8 @@
                                                 class="img-fluid
                                                 rounded-circle">
                                         </div>
+
+                                        <!-- Info and contact name -->
                                         <div class="info">
                                             <h4>{{contact.name}}</h4>
                                             <div class="last_message
@@ -107,23 +121,28 @@
                                         </div>
                                     </div>
 
+                                    <!-- Date of the last msg -->
                                     <div class="date fs-6 text-muted me-2">{{contact.messages[contact.messages.length
-                                        - 1].date}}</div>
+                                        - 1].date}}
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
+                    <!-- Chat container -->
                     <div class="chat d-flex flex-column">
 
+                        <!-- Chat container header -->
                         <div class="head_chat px-2 d-flex
                             justify-content-between align-items-center">
 
+                            <!-- Contact info container -->
                             <div class="contact d-flex align-items-center"
                                 v-for="(contact, index) in
                                 contacts" v-if="counter == index">
 
+                                <!-- User image -->
                                 <div class="user_img">
                                     <img :src="'./assets/img/avatar' +
                                         contact.avatar + '.jpg'"
@@ -131,6 +150,8 @@
                                         rounded-circle">
                                 </div>
 
+
+                                <!-- Contact info -->
                                 <div class="info m-4">
                                     <h5 class="">{{contact.name}}</h5>
                                     <p class="text-muted m-0">Ultimo accesso
@@ -143,6 +164,7 @@
 
                             </div>
 
+                            <!-- Chat header icons -->
                             <div class="chat_icon m-2 fs-3 lightgray">
                                 <i class="fas fa-search m-2"></i>
                                 <i class="fas fa-paperclip m-2"></i>
@@ -151,24 +173,30 @@
 
                         </div>
 
+                        <!-- Messages container(chat window) -->
                         <div class="messages p-5">
                             <div class="message d-block" v-for="(message, index)
                                 in
                                 contacts[counter].messages">
                                 <div class="py-1 px-4 m-1 clearfix">
 
+                                    <!-- Single message (object of messages[]) -->
                                     <div class="d-flex flex-column msg p-3
                                         round position-relative single_msg"
                                         :class="message.status"
-                                        @click="show_popup(index)">
+                                        @click="show_popup">
 
+                                        <!-- Message content -->
                                         <div class="d-flex
                                             justify-content-between">
                                             {{message.text}}
                                             <i class="fas fa-chevron-down
                                                 icon_pop ps-2"></i>
                                         </div>
+
+                                        <!-- Message date -->
                                         <span class="text-end text-muted date">{{message.date}}</span>
+                                        <!-- Dropdown -->
                                         <div class="popup
                                             position-absolute p-2 shadow
                                             rounded" :class="index
@@ -183,9 +211,9 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
 
+                        <!-- Messages input section -->
                         <div class="type_section d-flex justify-content-evenly
                             align-items-center">
 
