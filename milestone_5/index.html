@@ -155,13 +155,22 @@
                             <div class="message d-block" v-for="message in
                                 contacts[counter].messages">
                                 <div class="py-1 px-4 m-1 clearfix">
+
                                     <div class="d-flex flex-column msg p-3
-                                        round"
+                                        round position-relative"
                                         :class="message.status">
                                         <span>{{message.text}}</span>
                                         <span class="text-end text-muted date">{{message.date}}</span>
+                                        <div class="popup d-flex flex-column
+                                            position-absolute">
+                                            <div class="info_msg">
+                                                <p>Info messaggio</p>
+                                            </div>
+                                            <div class="delete">
+                                                <p>Elimina messaggio</p>
+                                            </div>
+                                        </div>
                                     </div>
-
                                 </div>
                             </div>
 
