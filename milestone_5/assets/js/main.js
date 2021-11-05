@@ -131,13 +131,10 @@ const app = new Vue({
         },
 
 
-        del(num) {
-            this.contacts[this.counter].messages.splice(num, 1)
-        },
 
-        show_popup() {
+
+        /* show_popup() {
             if (this.dropdown == true) {
-                this.drop = ''
                 this.dropdown = false
                 console.log(this.dropdown);
             } else {
@@ -145,15 +142,16 @@ const app = new Vue({
                 this.dropdown = true
                 console.log(this.dropdown);
             }
-        },
+        }, */
 
-
-        drop(n) {
+        drop_pop(n) {
             this.i = n;
             console.log(this.i);
         },
 
-
+        del(cont) {
+            this.contacts[this.counter].messages.splice(cont, 1)
+        },
 
 
 

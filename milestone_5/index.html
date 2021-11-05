@@ -184,7 +184,7 @@
                                     <div class="d-flex flex-column msg p-3
                                         round position-relative single_msg"
                                         :class="message.status"
-                                        @click="show_popup">
+                                        @click="drop_pop(index)">
 
                                         <!-- Message content -->
                                         <div class="d-flex
@@ -204,7 +204,8 @@
                                             <div class="info_msg text-end">
                                                 <p>Info messaggio</p>
                                             </div>
-                                            <div class="delete text-end">
+                                            <div class="delete text-end"
+                                                @click="del">
                                                 <p>Elimina messaggio</p>
                                             </div>
                                         </div>
