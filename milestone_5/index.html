@@ -115,9 +115,21 @@
                                         <!-- Info and contact name -->
                                         <div class="info">
                                             <h4>{{contact.name}}</h4>
+
                                             <div class="last_message
-                                                text-muted">{{contact.messages[contact.messages.length
-                                                - 1].text}}</div>
+                                                text-muted"
+                                                v-if="contact.messages.length>
+                                                0">
+                                                <div>
+                                                    {{contact.messages[contact.messages.length
+                                                    - 1].text}}</div>
+
+                                            </div>
+                                            <div v-else>
+                                                <p>Nessun messaggio</p>
+                                            </div>
+
+
                                         </div>
                                     </div>
 
@@ -187,6 +199,8 @@
                                         @click="drop_pop(index)">
 
                                         <!-- Message content -->
+
+
                                         <div class="d-flex
                                             justify-content-between">
                                             {{message.text}}
@@ -194,18 +208,22 @@
                                                 icon_pop ps-2"></i>
                                         </div>
 
+
+
+
                                         <!-- Message date -->
                                         <span class="text-end text-muted date">{{message.date}}</span>
                                         <!-- Dropdown -->
                                         <div class="popup
                                             position-absolute p-2 shadow
                                             rounded" :class="index
-                                            === i ? 'd_block' : ''">
+                                            === dropdown.index && dropdown.open
+                                            ? 'd_block' : ''">
                                             <div class="info_msg text-end">
                                                 <p>Info messaggio</p>
                                             </div>
                                             <div class="delete text-end"
-                                                @click="del">
+                                                @click="del(index)">
                                                 <p>Elimina messaggio</p>
                                             </div>
                                         </div>

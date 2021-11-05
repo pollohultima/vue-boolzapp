@@ -6,15 +6,16 @@ const app = new Vue({
 
         counter: 0,
 
-        i: 0,
-
         input_text: "",
 
         input_contact: "",
 
         last_log: dayjs().format('H:mm:ss'),
 
-        dropdown: false,
+        dropdown: {
+            index: 0,
+            open: false
+        },
 
 
 
@@ -131,22 +132,10 @@ const app = new Vue({
         },
 
 
-
-
-        /* show_popup() {
-            if (this.dropdown == true) {
-                this.dropdown = false
-                console.log(this.dropdown);
-            } else {
-                this.drop
-                this.dropdown = true
-                console.log(this.dropdown);
-            }
-        }, */
-
         drop_pop(n) {
-            this.i = n;
-            console.log(this.i);
+            this.dropdown.index = n;
+            this.dropdown.open = !this.dropdown.open
+            console.log(this.dropdown.open);
         },
 
         del(cont) {
